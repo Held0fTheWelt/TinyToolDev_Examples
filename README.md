@@ -11,6 +11,7 @@ You are reading the `LLM-Store-Examples_v.5.4` branch.
 | Branch | Product | Unreal Version | Purpose |
 | --- | --- | --- | --- |
 | [`LLM-Store-Examples_v.5.4`](https://github.com/Held0fTheWelt/TinyToolDev_Examples/tree/LLM-Store-Examples_v.5.4) | LLM Store | Unreal Engine 5.4 | C++ and Blueprint examples for provider-neutral AI routes, mock setup, prompt scenarios, policies, and buyer documentation. |
+| [`SmartContentDiet-Examples_v.5.4`](https://github.com/Held0fTheWelt/TinyToolDev_Examples/tree/SmartContentDiet-Examples_v.5.4) | SmartContentDiet | Unreal Engine 5.4 | Custom `ISmartSimilarityProvider`, registry registration at third-party tier, and buyer documentation for the open interface. |
 
 Useful branch commands:
 
@@ -18,6 +19,7 @@ Useful branch commands:
 git fetch origin
 git checkout main
 git checkout LLM-Store-Examples_v.5.4
+git checkout SmartContentDiet-Examples_v.5.4
 ```
 
 ## Merge Baseline
@@ -47,10 +49,22 @@ Common branch naming:
 ```text
 main
 LLM-Store-Examples_v.5.4
+SmartContentDiet-Examples_v.5.4
 example/<product>/<topic>
 example/<product>/<topic>-blueprint
 example/<product>/<topic>-cpp
 integration/<product-a>-<product-b>/<topic>
+```
+
+Examples:
+
+```text
+LLM-Store-Examples_v.5.4
+SmartContentDiet-Examples_v.5.4
+example/llmstore/quickstart
+example/llmstore/blueprint-chat
+example/advancedtween/cpp-runtime
+integration/llmstore-ui/debug-panel
 ```
 
 Shared documentation:
@@ -60,6 +74,17 @@ Shared documentation:
 - `Documentation/CurrentExample.md` explains the currently checked-out example branch.
 - `Examples/README.md` explains where branch-specific non-asset sample data can live.
 - `Plugins/README.md` explains how product plugins should be handled by branches.
+
+## Branch Quality Bar
+
+Every example branch should document:
+
+- What product or feature it demonstrates.
+- Which plugin version or marketplace package is required.
+- Where the product documentation is linked in the related `.uplugin`.
+- Which map, Blueprint, C++ class, or widget is the entry point.
+- Whether network access, API keys, local files, credentials, or third-party services are needed.
+- How to verify the example in less than five minutes.
 
 ## LLM Store Example
 
