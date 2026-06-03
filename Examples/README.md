@@ -1,16 +1,11 @@
 # Example Data Folder
 
-This folder is reserved for branch-specific non-Unreal sample data.
+This branch stores non-Unreal LLM Store sample data here.
 
-Use it for files such as:
+Current files:
 
-- JSON scenarios.
-- CSV test data.
-- Prompt templates.
-- Config snippets.
-- External service examples.
-- Small text fixtures used by C++ or Blueprint tutorials.
+- `Examples/LLMStore/PromptScenarios.json` contains plain-text prompts for the Blueprint scenario catalog.
 
-Do not put generated Unreal folders here. Use `Content/<Product>/<ExampleName>/` for `.uasset` and `.umap` files.
+The executable mock route setup lives in `Config/LLMStore.json`.
 
-The base branch keeps this folder intentionally empty except for this note.
+Use `Content/LLMStore/` for future `.uasset` or `.umap` samples.

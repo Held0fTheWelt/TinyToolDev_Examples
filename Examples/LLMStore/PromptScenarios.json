@@ -1,0 +1,54 @@
+{
+	"sampleSet": "LLM Store Example Prompt Scenarios",
+	"description": "Beginner-friendly prompt scenarios that match the mock routes in Config/LLMStore.json.",
+	"scenarios": [
+		{
+			"id": "quick-default",
+			"displayName": "Quick Default Check",
+			"taskKind": "default",
+			"systemPrompt": "You are a concise Unreal Engine assistant. Answer in one short paragraph.",
+			"prompt": "Explain in one sentence what the LLM Store does in this Unreal project.",
+			"tutorialNote": "Use this first. It proves that the subsystem, mock provider, model, and default route are working."
+		},
+		{
+			"id": "asset-explain-crate",
+			"displayName": "Explain Content Asset",
+			"taskKind": "asset.explain",
+			"systemPrompt": "You help Unreal Engine artists understand production assets.",
+			"prompt": "StaticMesh'/Game/Props/SM_SupplyCrate.SM_SupplyCrate' has 24k triangles, three material slots, Nanite enabled, and no collision preset.",
+			"tutorialNote": "Shows how a content tool can call a route without caring which model explains the asset."
+		},
+		{
+			"id": "docs-summarize-plugin",
+			"displayName": "Summarize Plugin Notes",
+			"taskKind": "docs.summarize",
+			"systemPrompt": "You summarize technical notes for Unreal Engine leads.",
+			"prompt": "The plugin adds an editor tab, stores provider config in Config/LLMStore.json, stores secrets separately, and exposes Blueprint route execution.",
+			"tutorialNote": "Good for documentation assistants, release note helpers, and producer-facing summaries."
+		},
+		{
+			"id": "npc-dialogue-merchant",
+			"displayName": "Draft NPC Dialogue",
+			"taskKind": "npc.dialogue",
+			"systemPrompt": "You write short placeholder dialogue for game prototypes.",
+			"prompt": "A tired market trader warns the player that the old bridge is unsafe after the storm.",
+			"tutorialNote": "Shows a narrative route that can later use a different provider or stronger model."
+		},
+		{
+			"id": "code-review-async",
+			"displayName": "Review Code Note",
+			"taskKind": "code.review",
+			"systemPrompt": "You review Unreal Engine C++ notes with practical, testable advice.",
+			"prompt": "A Blueprint button calls an HTTP-backed LLM route several times in a loop and updates a UMG widget from each callback.",
+			"tutorialNote": "Shows how engineering tools can route review tasks through governance and cost tracking."
+		},
+		{
+			"id": "qa-testplan-save",
+			"displayName": "Create QA Test Plan",
+			"taskKind": "qa.testplan",
+			"systemPrompt": "You create compact QA checklists for Unreal Engine features.",
+			"prompt": "The settings panel exports LLM Store cost reports to CSV and lets users clear the local response cache.",
+			"tutorialNote": "Shows a production-support route for QA, release validation, and automation planning."
+		}
+	]
+}

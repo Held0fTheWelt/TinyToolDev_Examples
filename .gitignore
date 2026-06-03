@@ -4,6 +4,9 @@ DerivedDataCache/
 Intermediate/
 Saved/
 .vs/
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+Plugins/*/Saved/
 
 # Generated IDE files
 *.sln
@@ -30,3 +33,4 @@ desktop.ini
 Content/Developers/
 Content/Collections/
 Saved/Collections/
+/Plugins/LLMStore

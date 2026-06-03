@@ -8,9 +8,17 @@ public class TinyToolDev_Examples : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
-
-		// Keep the base module deliberately small. Example branches add their
-		// plugin dependencies and UI/runtime modules only where they are needed.
+		// The LLM Store sample uses the plugin in two ways:
+		// - LLMStoreInterface provides the public request/response structs and delegates.
+		// - LLMStore provides ULLMStoreSubsystem and helper setup functions used by the tutorial actors.
+		PublicDependencyModuleNames.AddRange(new string[]
+		{
+			"Core",
+			"CoreUObject",
+			"Engine",
+			"InputCore",
+			"LLMStore",
+			"LLMStoreInterface"
+		});
 	}
 }

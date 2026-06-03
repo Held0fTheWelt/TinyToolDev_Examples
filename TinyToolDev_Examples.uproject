@@ -1,13 +1,19 @@
 {
 	"FileVersion": 3,
 	"EngineAssociation": "5.4",
-	"Category": "Tiny Tool Development Examples",
-	"Description": "Neutral Unreal Engine base project for Tiny Tool Development examples. Product-specific samples are maintained on dedicated example branches.",
+	"Category": "AI Samples",
+	"Description": "Tiny Tool Development LLM Store example branch for Unreal Engine 5.4. Demonstrates buyer-friendly C++ and Blueprint usage of provider-neutral AI routes, mock setup, prompt scenarios, policies, and documentation.",
 	"Modules": [
 		{
 			"Name": "TinyToolDev_Examples",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "LLMStore",
+			"Enabled": true
 		}
 	]
 }

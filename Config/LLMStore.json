@@ -1,0 +1,245 @@
+{
+	"providers": [
+		{
+			"id": "quickstart_mock",
+			"displayName": "Quick Start Mock",
+			"type": "mock",
+			"baseUrl": "",
+			"bEnabled": true,
+			"meta": {},
+			"retryCount": 0,
+			"timeoutSeconds": 0,
+			"circuitBreakerFailureThreshold": 3,
+			"circuitBreakerCooldownSeconds": 60
+		}
+	],
+	"models": [
+		{
+			"id": "quickstart_mock_model",
+			"name": "mock",
+			"displayName": "Quick Start Mock Model",
+			"providerId": "quickstart_mock",
+			"role": "demo",
+			"bStructured": false,
+			"timeoutSeconds": 60,
+			"bEnabled": true
+		}
+	],
+	"routes": [
+		{
+			"taskKind": "default",
+			"preferredModelId": "quickstart_mock_model",
+			"fallbackModelId": "",
+			"fallbackModelIds": [],
+			"mockModelId": "quickstart_mock_model",
+			"bUseMock": true,
+			"workflowScope": "Demo",
+			"promptTemplateId": "",
+			"policy": {
+				"taskKind": "default",
+				"bAllowCloud": false,
+				"bLocalOnly": true,
+				"maxContextTokens": 1024,
+				"maxEstimatedCost": 0.0,
+				"allowedProviderTypes": [
+					"mock"
+				],
+				"deniedProviderTypes": []
+			},
+			"bEnabled": true
+		},
+		{
+			"taskKind": "asset.explain",
+			"preferredModelId": "quickstart_mock_model",
+			"fallbackModelId": "",
+			"fallbackModelIds": [],
+			"mockModelId": "quickstart_mock_model",
+			"bUseMock": true,
+			"workflowScope": "Content",
+			"promptTemplateId": "example.asset.explain",
+			"policy": {
+				"taskKind": "asset.explain",
+				"bAllowCloud": false,
+				"bLocalOnly": true,
+				"maxContextTokens": 2048,
+				"maxEstimatedCost": 0.0,
+				"allowedProviderTypes": [
+					"mock"
+				],
+				"deniedProviderTypes": []
+			},
+			"bEnabled": true
+		},
+		{
+			"taskKind": "docs.summarize",
+			"preferredModelId": "quickstart_mock_model",
+			"fallbackModelId": "",
+			"fallbackModelIds": [],
+			"mockModelId": "quickstart_mock_model",
+			"bUseMock": true,
+			"workflowScope": "Documentation",
+			"promptTemplateId": "example.docs.summarize",
+			"policy": {
+				"taskKind": "docs.summarize",
+				"bAllowCloud": false,
+				"bLocalOnly": true,
+				"maxContextTokens": 4096,
+				"maxEstimatedCost": 0.0,
+				"allowedProviderTypes": [
+					"mock"
+				],
+				"deniedProviderTypes": []
+			},
+			"bEnabled": true
+		},
+		{
+			"taskKind": "npc.dialogue",
+			"preferredModelId": "quickstart_mock_model",
+			"fallbackModelId": "",
+			"fallbackModelIds": [],
+			"mockModelId": "quickstart_mock_model",
+			"bUseMock": true,
+			"workflowScope": "Narrative",
+			"promptTemplateId": "example.npc.dialogue",
+			"policy": {
+				"taskKind": "npc.dialogue",
+				"bAllowCloud": false,
+				"bLocalOnly": true,
+				"maxContextTokens": 2048,
+				"maxEstimatedCost": 0.0,
+				"allowedProviderTypes": [
+					"mock"
+				],
+				"deniedProviderTypes": []
+			},
+			"bEnabled": true
+		},
+		{
+			"taskKind": "code.review",
+			"preferredModelId": "quickstart_mock_model",
+			"fallbackModelId": "",
+			"fallbackModelIds": [],
+			"mockModelId": "quickstart_mock_model",
+			"bUseMock": true,
+			"workflowScope": "Engineering",
+			"promptTemplateId": "example.code.review",
+			"policy": {
+				"taskKind": "code.review",
+				"bAllowCloud": false,
+				"bLocalOnly": true,
+				"maxContextTokens": 4096,
+				"maxEstimatedCost": 0.0,
+				"allowedProviderTypes": [
+					"mock"
+				],
+				"deniedProviderTypes": []
+			},
+			"bEnabled": true
+		},
+		{
+			"taskKind": "qa.testplan",
+			"preferredModelId": "quickstart_mock_model",
+			"fallbackModelId": "",
+			"fallbackModelIds": [],
+			"mockModelId": "quickstart_mock_model",
+			"bUseMock": true,
+			"workflowScope": "Quality",
+			"promptTemplateId": "example.qa.testplan",
+			"policy": {
+				"taskKind": "qa.testplan",
+				"bAllowCloud": false,
+				"bLocalOnly": true,
+				"maxContextTokens": 3072,
+				"maxEstimatedCost": 0.0,
+				"allowedProviderTypes": [
+					"mock"
+				],
+				"deniedProviderTypes": []
+			},
+			"bEnabled": true
+		}
+	],
+	"embeddingRoutes": [],
+	"routePolicies": [],
+	"promptTemplates": [
+		{
+			"id": "example.short.answer",
+			"description": "Short answer template for the sample project.",
+			"template": "User request: {prompt}\nAnswer briefly and mention that this is routed through LLM Store.",
+			"variables": [
+				"prompt"
+			]
+		},
+		{
+			"id": "example.asset.explain",
+			"description": "Explains an Unreal asset or content item for artists and designers.",
+			"template": "You are helping an Unreal Engine content team understand an asset.\n\nAsset notes:\n{prompt}\n\nReturn: purpose, likely owner, risk, and one useful next action.",
+			"variables": [
+				"prompt"
+			]
+		},
+		{
+			"id": "example.docs.summarize",
+			"description": "Summarizes documentation into decisions and next steps.",
+			"template": "Summarize the following Unreal project documentation for a busy technical lead.\n\nDocumentation:\n{prompt}\n\nReturn: summary, important decisions, missing information, and follow-up tasks.",
+			"variables": [
+				"prompt"
+			]
+		},
+		{
+			"id": "example.npc.dialogue",
+			"description": "Drafts a short in-character NPC line from narrative context.",
+			"template": "You are drafting placeholder NPC dialogue for an Unreal game prototype.\n\nNarrative context:\n{prompt}\n\nReturn three short dialogue options with different emotional tones.",
+			"variables": [
+				"prompt"
+			]
+		},
+		{
+			"id": "example.code.review",
+			"description": "Reviews a small C++ or Blueprint-adjacent code snippet.",
+			"template": "Review this Unreal Engine implementation note or snippet.\n\nContent:\n{prompt}\n\nReturn: likely issue, severity, safer pattern, and test idea.",
+			"variables": [
+				"prompt"
+			]
+		},
+		{
+			"id": "example.qa.testplan",
+			"description": "Turns a feature note into a compact QA checklist.",
+			"template": "Create a practical QA checklist for this Unreal feature.\n\nFeature note:\n{prompt}\n\nReturn: smoke tests, edge cases, regression risks, and automation ideas.",
+			"variables": [
+				"prompt"
+			]
+		}
+	],
+	"costRules": [
+		{
+			"providerType": "mock",
+			"modelId": "quickstart_mock_model",
+			"inputCostPer1KTokens": 0.0,
+			"outputCostPer1KTokens": 0.0,
+			"currency": "USD"
+		}
+	],
+	"buildRules": [
+		{
+			"buildConfiguration": "Shipping",
+			"bAllowCloud": false,
+			"bRequireLocalOrMock": true,
+			"allowedProviderTypes": [
+				"mock"
+			]
+		}
+	],
+	"secretBackend": {
+		"backend": "EncryptedFile",
+		"vault": "",
+		"keyPrefix": "LLMStoreExamples",
+		"meta": {}
+	},
+	"modes": {
+		"generationMode": "Mock",
+		"retrievalMode": "LocalOnly",
+		"validationMode": "Demo",
+		"runtimeProfile": "LLMStoreExampleMock"
+	}
+}

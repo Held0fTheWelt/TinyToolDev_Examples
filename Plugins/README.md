@@ -1,17 +1,16 @@
 # Plugins Folder
 
-The base branch does not require a product-specific plugin.
+This branch bundles the `LLMStore` plugin so the example can open and compile as a self-contained Unreal Engine 5.4 sample.
 
-Example branches can use this folder in one of two ways:
+Important plugin files:
 
-- Include a plugin copy when the license and distribution model allow it.
-- Leave the folder empty and document where the buyer should install the plugin.
+- `Plugins/LLMStore/LLMStore.uplugin`
+- `Plugins/LLMStore/Source/LLMStore/`
+- `Plugins/LLMStore/Source/LLMStoreInterface/`
+- `Plugins/LLMStore/Source/LLMStoreEditor/`
+- `Plugins/LLMStore/Documentation/README.md`
+- `Plugins/LLMStore/Documentation/BUYER_GUIDE.md`
 
-Every branch that depends on a plugin should say:
+Generated plugin binaries are ignored. Build them locally through Unreal Engine or UnrealBuildTool.
 
-- Which plugin is required.
-- Which plugin version was used while testing.
-- Whether the plugin is bundled or must be installed separately.
-- Where the product documentation is linked in the plugin `.uplugin`.
-
-Never commit private marketplace packages, local-only builds, or credentials.
+Do not commit API keys, local provider credentials, private marketplace packages, or machine-specific binaries.
