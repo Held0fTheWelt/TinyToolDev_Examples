@@ -78,6 +78,18 @@ The base branch uses generic Tiny Tool Development project metadata. Example bra
 
 Do not change company, support, license, or privacy fields unless the branch genuinely needs a product-specific statement.
 
+## Branding Strategy
+
+The base branch carries the shared Tiny Tool Development icon:
+
+```text
+Build/Windows/Application.ico
+Build/Windows/Application.png
+Documentation/Assets/TinyToolDevelopmentIcon.png
+```
+
+Example branches should keep this branding unless the branch demonstrates a specific product identity that needs its own icon. When a branch does replace the icon, document why in the branch README.
+
 ## Content Strategy
 
 Use this layout when a branch needs more than one file:

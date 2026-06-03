@@ -5,6 +5,9 @@
 *.ubulk binary
 *.uexp binary
 *.locres binary
+*.png binary
+*.ico binary
+*.icns binary
 
 *.ini text
 *.cs text

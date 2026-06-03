@@ -8,7 +8,7 @@ public class TinyToolDev_Examples : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
 		// Keep the base module deliberately small. Example branches add their
 		// plugin dependencies and UI/runtime modules only where they are needed.

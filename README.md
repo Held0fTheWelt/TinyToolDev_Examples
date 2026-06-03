@@ -1,5 +1,7 @@
 # Tiny Tool Development Examples
 
+<img src="Documentation/Assets/TinyToolDevelopmentIcon.png" alt="Tiny Tool Development icon" width="128">
+
 Neutral Unreal Engine base project for Tiny Tool Development sample content.
 
 This repository is intentionally product-agnostic on the main branch. Concrete examples, tutorials, plugin demos, and buyer-facing walkthroughs live on dedicated Git branches. That keeps every sample focused, easy to compare, and easy to reset.
@@ -10,6 +12,7 @@ This repository is intentionally product-agnostic on the main branch. Concrete e
 - Tiny Tool Development project metadata in Project Settings.
 - Shared documentation for branch-based example work.
 - Git hygiene for Unreal-generated files.
+- Tiny Tool Development branding assets for project and packaged Windows builds.
 - No product-specific plugin dependency in the base branch.
 
 The current branch does not demonstrate a specific Tiny Tool Development product. Checkout an example branch to see real sample content.
@@ -77,6 +80,8 @@ Every example branch should document:
 Generated Unreal folders such as `Binaries`, `DerivedDataCache`, `Intermediate`, `Saved`, and `.vs` are ignored. Commit source, config, docs, and intentional assets only.
 
 Large `.uasset` and `.umap` files are treated as binary files. Use Git LFS in the remote repository when example branches start carrying larger assets.
+
+The shared project icon lives in `Build/Windows/Application.ico`; the source PNG is kept in `Build/Windows/Application.png` and mirrored for documentation in `Documentation/Assets/TinyToolDevelopmentIcon.png`.
 
 ## About Tiny Tool Development
 
