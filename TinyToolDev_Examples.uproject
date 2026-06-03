@@ -1,13 +1,19 @@
 {
 	"FileVersion": 3,
 	"EngineAssociation": "5.4",
-	"Category": "Tiny Tool Development Examples",
-	"Description": "Neutral Unreal Engine base project for Tiny Tool Development examples. Product-specific samples are maintained on dedicated example branches.",
+	"Category": "AI Samples",
+	"Description": "Tiny Tool Development Internal Index Service example branch for Unreal Engine 5.4. Clean host project for validating the released InternalIndexService plugin, which is transported into Plugins/ (git-ignored) by the IIS release gate.",
 	"Modules": [
 		{
 			"Name": "TinyToolDev_Examples",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "InternalIndexService",
+			"Enabled": true
 		}
 	]
 }
