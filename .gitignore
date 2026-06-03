@@ -1,0 +1,32 @@
+# Unreal generated files
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+
+# Generated IDE files
+*.sln
+*.VC.db
+*.VC.opendb
+*.opensdf
+*.sdf
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build and log output outside the ignored Unreal folders
+*.log
+*.tmp
+*.bak
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local-only Unreal content
+Content/Developers/
+Content/Collections/
+Saved/Collections/

@@ -1,0 +1,14 @@
+* text=auto
+
+*.uasset binary
+*.umap binary
+*.ubulk binary
+*.uexp binary
+*.locres binary
+
+*.ini text
+*.cs text
+*.cpp text
+*.h text
+*.json text
+*.md text
