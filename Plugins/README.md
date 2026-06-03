@@ -1,17 +1,24 @@
 # Plugins Folder
 
-The base branch does not require a product-specific plugin.
+This branch requires the separately distributed `SmartContentDiet` plugin. The plugin package itself is intentionally not part of this example repository.
 
-Example branches can use this folder in one of two ways:
+Install it locally in one of these ways:
 
-- Include a plugin copy when the license and distribution model allow it.
-- Leave the folder empty and document where the buyer should install the plugin.
+- Copy or install the plugin to `Plugins/SmartContentDiet`.
+- Install it as an engine plugin available to Unreal Engine 5.4.
 
-Every branch that depends on a plugin should say:
+`Plugins/SmartContentDiet` is intentionally ignored by `.gitignore`. That keeps locally installed plugin packages, private builds, generated binaries, credentials, and machine-specific files out of this example branch.
 
-- Which plugin is required.
-- Which plugin version was used while testing.
-- Whether the plugin is bundled or must be installed separately.
-- Where the product documentation is linked in the plugin `.uplugin`.
+This is also the intended maintainer workflow for checking the examples with the original plugin: install or copy the plugin here locally, run the sample validation, and keep the plugin package out of Git.
 
-Never commit private marketplace packages, local-only builds, or credentials.
+Maintainer copy path from the development monorepo:
+
+```text
+copy <TinyToolDevelopment>/Git/GovernanceDevelopmentPlugins/SmartContentDiet  →  Plugins/SmartContentDiet
+```
+
+Public plugin documentation:
+
+https://github.com/Held0fTheWelt/TinyToolDevelopment/tree/master/GovernanceDevelopmentPlugins/SmartContentDiet
+
+Do not commit API keys, local credentials, private marketplace packages, or generated binaries.

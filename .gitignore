@@ -30,4 +30,6 @@ desktop.ini
 Content/Developers/
 Content/Collections/
 Saved/Collections/
-/Plugins
+# Local plugin installs. Product packages are required but not committed.
+/Plugins/LLMStore
+/Plugins/SmartContentDiet
