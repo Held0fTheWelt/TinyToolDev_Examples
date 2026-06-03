@@ -22,12 +22,14 @@ The current branch does not demonstrate a specific Tiny Tool Development product
 | Branch | Product | Unreal Version | What it demonstrates |
 | --- | --- | --- | --- |
 | [`LLM-Store-Examples_v.5.4`](https://github.com/Held0fTheWelt/TinyToolDev_Examples/tree/LLM-Store-Examples_v.5.4) | LLM Store | Unreal Engine 5.4 | C++ actors, Blueprint helper nodes, scenario prompts, mock provider setup, route policies, buyer documentation, and bundled plugin source. |
+| [`SmartContentDiet-Examples_v.5.4`](https://github.com/Held0fTheWelt/TinyToolDev_Examples/tree/SmartContentDiet-Examples_v.5.4) | SmartContentDiet | Unreal Engine 5.4 | Custom `ISmartSimilarityProvider`, third-party registry registration, and buyer documentation for the open interface. |
 
-To inspect the LLM Store sample:
+To inspect an example branch:
 
 ```bash
 git fetch origin
 git checkout LLM-Store-Examples_v.5.4
+git checkout SmartContentDiet-Examples_v.5.4
 ```
 
 ## Branch Model
@@ -37,6 +39,7 @@ Use `main` as the neutral base. Each example should use its own branch:
 ```text
 main
 LLM-Store-Examples_v.5.4
+SmartContentDiet-Examples_v.5.4
 example/<product>/<topic>
 example/<product>/<topic>-blueprint
 example/<product>/<topic>-cpp
@@ -47,6 +50,7 @@ Examples:
 
 ```text
 LLM-Store-Examples_v.5.4
+SmartContentDiet-Examples_v.5.4
 example/llmstore/quickstart
 example/llmstore/blueprint-chat
 example/advancedtween/cpp-runtime
