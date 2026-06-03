@@ -7,10 +7,11 @@ LLM Store centralizes AI providers, models, task routes, policies, costs, secret
 ## First Run
 
 1. Open `TinyToolDev_Examples.uproject` in Unreal Engine 5.4.
-2. Confirm that the bundled `LLMStore` plugin is enabled.
-3. Open `Tools -> LLM Store`.
-4. Verify that the mock `default` route resolves.
-5. Place `LLMStoreExampleActor` in any level and press Play.
+2. Install the separately distributed `LLMStore` plugin.
+3. Confirm that the `LLMStore` plugin is enabled.
+4. Open `Tools -> LLM Store`.
+5. Verify that the mock `default` route resolves.
+6. Place `LLMStoreExampleActor` in any level and press Play.
 
 The first run uses the local mock provider from `Config/LLMStore.json`, so it does not need a network connection or API key.
 
@@ -24,11 +25,12 @@ The first run uses the local mock provider from `Config/LLMStore.json`, so it do
 - `Source/TinyToolDev_Examples/Public/LLMStoreConversationComponent.h` is useful for chat or NPC-dialogue prototypes.
 - `Examples/LLMStore/PromptScenarios.json` contains plain-text scenario prompts.
 
-## Plugin Documentation
+## Plugin Requirement
 
-The bundled plugin documentation lives in `Plugins/LLMStore/Documentation/`. Start with:
+LLMStore is distributed separately and is intentionally not part of this example repository. Install it as a project or engine plugin before opening the sample.
 
-- `Plugins/LLMStore/Documentation/README.md`
-- `Plugins/LLMStore/Documentation/QUICKSTART.md`
-- `Plugins/LLMStore/Documentation/BUYER_GUIDE.md`
-- `Plugins/LLMStore/Documentation/RoutePolicyReference.md`
+For sample validation, copy the original distributed plugin into `Plugins/LLMStore`, build or run the project, and leave that local plugin package uncommitted.
+
+Public plugin documentation:
+
+https://github.com/Held0fTheWelt/TinyToolDevelopment/tree/master/ai-plugins/LLMStore

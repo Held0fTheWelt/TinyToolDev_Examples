@@ -1,16 +1,18 @@
 # Plugins Folder
 
-This branch bundles the `LLMStore` plugin so the example can open and compile as a self-contained Unreal Engine 5.4 sample.
+This branch requires the separately distributed `LLMStore` plugin. The plugin package itself is intentionally not part of this example repository.
 
-Important plugin files:
+Install it locally in one of these ways:
 
-- `Plugins/LLMStore/LLMStore.uplugin`
-- `Plugins/LLMStore/Source/LLMStore/`
-- `Plugins/LLMStore/Source/LLMStoreInterface/`
-- `Plugins/LLMStore/Source/LLMStoreEditor/`
-- `Plugins/LLMStore/Documentation/README.md`
-- `Plugins/LLMStore/Documentation/BUYER_GUIDE.md`
+- Copy or install the plugin to `Plugins/LLMStore`.
+- Install it as an engine plugin available to Unreal Engine 5.4.
 
-Generated plugin binaries are ignored. Build them locally through Unreal Engine or UnrealBuildTool.
+`Plugins/LLMStore` is intentionally ignored by `.gitignore`. That keeps locally installed plugin packages, private builds, generated binaries, credentials, and machine-specific files out of this example branch.
 
-Do not commit API keys, local provider credentials, private marketplace packages, or machine-specific binaries.
+This is also the intended maintainer workflow for checking the examples with the original plugin: install or copy the plugin here locally, run the sample validation, and keep the plugin package out of Git.
+
+Public plugin documentation:
+
+https://github.com/Held0fTheWelt/TinyToolDevelopment/tree/master/ai-plugins/LLMStore
+
+Do not commit API keys, local provider credentials, private marketplace packages, or generated binaries.

@@ -2,7 +2,7 @@
 
 This guide is written for buyers, technical artists, Blueprint users, tools programmers, and Unreal Engine teams who want to understand how to consume **LLM Store** in a real project.
 
-It focuses on the example project, not the full plugin internals. For complete reference material, use the plugin documentation linked at the end of this file. The same public documentation URL is also stored in `Plugins/LLMStore/LLMStore.uplugin` as `DocsURL`.
+It focuses on the example project, not the full plugin internals. LLMStore is distributed separately and is intentionally not part of this example repository. For complete reference material, use the public plugin documentation linked at the end of this file.
 
 ## The Short Version
 
@@ -355,19 +355,6 @@ The answer this sample demonstrates is yes for the integration surface. You stil
 
 ## Further Documentation
 
-Public documentation URL from `Plugins/LLMStore/LLMStore.uplugin`:
+Public plugin documentation:
 
 [https://github.com/Held0fTheWelt/TinyToolDevelopment/tree/master/ai-plugins/LLMStore](https://github.com/Held0fTheWelt/TinyToolDevelopment/tree/master/ai-plugins/LLMStore)
-
-Local references:
-
-- [Plugin README](../Plugins/LLMStore/Documentation/README.md)
-- [Buyer Guide](../Plugins/LLMStore/Documentation/BUYER_GUIDE.md)
-- [Quick Start](../Plugins/LLMStore/Documentation/QUICKSTART.md)
-- [User Manual](../Plugins/LLMStore/Documentation/UserManual.md)
-- [Integration Guide](../Plugins/LLMStore/Documentation/INTEGRATION.md)
-- [Provider Reference](../Plugins/LLMStore/Documentation/ProviderReference.md)
-- [Route Policy Reference](../Plugins/LLMStore/Documentation/RoutePolicyReference.md)
-- [Secret Backends](../Plugins/LLMStore/Documentation/SECRET_BACKENDS.md)
-- [Cost Tracking](../Plugins/LLMStore/Documentation/COST_TRACKING.md)
-- [Troubleshooting](../Plugins/LLMStore/Documentation/TROUBLESHOOTING.md)

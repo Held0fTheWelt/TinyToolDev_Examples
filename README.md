@@ -69,12 +69,14 @@ Use it when you want to see how a real Unreal module calls LLM Store from **C++*
 
 ## Plugin Requirement
 
-This branch requires the `LLMStore` plugin, but the plugin package itself is not committed to this repository. Install it before opening the project:
+This branch requires the separately distributed `LLMStore` plugin. The plugin package is intentionally not part of this example repository. Install it before opening the project:
 
 - as a project plugin under `Plugins/LLMStore`, or
 - as an engine plugin available to Unreal Engine 5.4.
 
-`Plugins/LLMStore` is ignored on purpose so local marketplace packages, private builds, binaries, and credentials do not accidentally enter the example repository.
+`Plugins/LLMStore` is ignored on purpose so locally installed plugin packages, private builds, binaries, and credentials do not accidentally enter the example repository.
+
+This is the intended validation workflow for maintainers: copy the original distributed plugin into `Plugins/LLMStore`, build or run the examples, and keep the plugin package local.
 
 The project ships with an offline mock setup in `Config/LLMStore.json`. It includes these routes:
 
@@ -112,26 +114,15 @@ The mock provider returns through the same route execution path that a real prov
 | `Source/TinyToolDev_Examples/Public/LLMStoreExampleActor.h` | Placeable actor for a first C++/Blueprint smoke test. |
 | `Source/TinyToolDev_Examples/Public/LLMStoreScenarioRunnerActor.h` | Placeable actor for demo menus and sequential scenario runs. |
 | `Source/TinyToolDev_Examples/Public/LLMStoreConversationComponent.h` | Blueprint-spawnable component for chat or NPC-dialogue prototypes. |
-| `Plugins/README.md` | Notes for installing the required plugin locally. |
+| `Plugins/README.md` | Notes about the intentionally external plugin dependency. |
 
 ## Documentation Map
 
-The plugin's public documentation URL is stored in the plugin `.uplugin` metadata as `DocsURL`:
+Use the public LLM Store documentation for plugin setup and API reference:
 
 [https://github.com/Held0fTheWelt/TinyToolDevelopment/tree/master/ai-plugins/LLMStore](https://github.com/Held0fTheWelt/TinyToolDevelopment/tree/master/ai-plugins/LLMStore)
 
-After installing the plugin locally under `Plugins/LLMStore`, useful local docs are usually available at:
-
-- `Plugins/LLMStore/Documentation/README.md`
-- `Plugins/LLMStore/Documentation/BUYER_GUIDE.md`
-- `Plugins/LLMStore/Documentation/QUICKSTART.md`
-- `Plugins/LLMStore/Documentation/UserManual.md`
-- `Plugins/LLMStore/Documentation/INTEGRATION.md`
-- `Plugins/LLMStore/Documentation/ProviderReference.md`
-- `Plugins/LLMStore/Documentation/RoutePolicyReference.md`
-- `Plugins/LLMStore/Documentation/SECRET_BACKENDS.md`
-- `Plugins/LLMStore/Documentation/COST_TRACKING.md`
-- `Plugins/LLMStore/Documentation/TROUBLESHOOTING.md`
+When the plugin is installed locally, the same URL is also available through its `.uplugin` `DocsURL` metadata.
 
 ## Verification
 
@@ -141,7 +132,7 @@ This branch has been verified with:
 D:/Engines/UE_5.4/Engine/Build/BatchFiles/Build.bat TinyToolDev_ExamplesEditor Win64 Development -Project=D:/TinyToolDevelopment/TinyToolDev_Examples/TinyToolDev_Examples.uproject -WaitMutex -NoLiveCoding
 ```
 
-Expected result: UnrealHeaderTool runs, the sample module compiles, and `UnrealEditor-TinyToolDev_Examples.dll` links successfully.
+Expected result after the original LLMStore plugin is installed locally: UnrealHeaderTool runs, the sample module compiles, and `UnrealEditor-TinyToolDev_Examples.dll` links successfully.
 
 ## Repository Policy
 

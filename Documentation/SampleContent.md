@@ -85,8 +85,6 @@ When routes describe work, you can later move `code.review` to a local model, ke
 5. Keep secrets out of `Config/LLMStore.json`.
 6. Let tools, widgets, and gameplay systems call only the route.
 
-For provider setup, see:
+For provider setup, use the separately distributed LLM Store plugin documentation:
 
-- [Plugin Quick Start](../Plugins/LLMStore/Documentation/QUICKSTART.md)
-- [Provider Reference](../Plugins/LLMStore/Documentation/ProviderReference.md)
-- [Route Policy Reference](../Plugins/LLMStore/Documentation/RoutePolicyReference.md)
+https://github.com/Held0fTheWelt/TinyToolDevelopment/tree/master/ai-plugins/LLMStore
