@@ -33,4 +33,7 @@ desktop.ini
 Content/Developers/
 Content/Collections/
 Saved/Collections/
+
+# Local plugin installs. The LLM Store marketplace/plugin package is required
+# for this branch, but the package itself is not committed here.
 /Plugins/LLMStore
