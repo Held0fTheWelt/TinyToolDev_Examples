@@ -55,6 +55,17 @@ example/<product>/<topic>-cpp
 integration/<product-a>-<product-b>/<topic>
 ```
 
+Examples:
+
+```text
+LLM-Store-Examples_v.5.4
+SmartContentDiet-Examples_v.5.4
+example/llmstore/quickstart
+example/llmstore/blueprint-chat
+example/advancedtween/cpp-runtime
+integration/llmstore-ui/debug-panel
+```
+
 Shared documentation:
 
 - `Documentation/BranchWorkflow.md` explains how examples should be created and maintained.
@@ -62,6 +73,17 @@ Shared documentation:
 - `Documentation/CurrentExample.md` explains the currently checked-out example branch.
 - `Examples/README.md` explains where branch-specific non-asset sample data can live.
 - `Plugins/README.md` explains how product plugins should be handled by branches.
+
+## Branch Quality Bar
+
+Every example branch should document:
+
+- What product or feature it demonstrates.
+- Which plugin version or marketplace package is required.
+- Where the product documentation is linked in the related `.uplugin`.
+- Which map, Blueprint, C++ class, or widget is the entry point.
+- Whether network access, API keys, local files, credentials, or third-party services are needed.
+- How to verify the example in less than five minutes.
 
 ## SmartContentDiet Example
 
