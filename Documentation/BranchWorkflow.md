@@ -21,6 +21,25 @@ This project is a shared base for Tiny Tool Development examples. The base branc
 
 `integration/<products>/<topic>` branches may combine products, but should only be used when the integration itself is the point of the sample.
 
+### Product release branches (preferred for marketplace plugins)
+
+For each Tiny Tool Development product tied to an Unreal Engine version, use one **self-contained** branch and the same `.uproject` file:
+
+```text
+{Product}-Examples_v.{EngineVersion}
+```
+
+| Branch | Product | Notes |
+| --- | --- | --- |
+| `LLM-Store-Examples_v.5.4` | LLM Store | C++ / Blueprint tutorial actors; `Plugins/LLMStore` gitignored |
+| `SmartContentDiet-Examples_v.5.4` | SmartContentDiet | Custom `ISmartSimilarityProvider` sample; `Plugins/SmartContentDiet` gitignored |
+
+Monorepo planning doc for the SmartContentDiet sample (paths, commits, verification):
+
+`TinyToolDevelopment/Git/docs/superpowers/plans/2026-06-03-scd-p13-examples-project.md`
+
+**README across branches:** `main` keeps the branch catalog table; product branches add **Current Branch**, **Merge Baseline**, and a product section (see root `README.md` on `LLM-Store-Examples_v.5.4`).
+
 ## Creating A New Example Branch
 
 Start from `main`:
@@ -43,7 +62,16 @@ Then prepare the branch:
 
 ## Naming Guidelines
 
-Prefer branch names that describe the product and the learning goal:
+Prefer branch names that describe the product and the learning goal.
+
+**Marketplace / Fab plugins (one branch per product × engine):**
+
+```text
+LLM-Store-Examples_v.5.4
+SmartContentDiet-Examples_v.5.4
+```
+
+**Focused topic branches (optional, smaller scope):**
 
 ```text
 example/llmstore/quickstart
