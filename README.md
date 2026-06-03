@@ -17,12 +17,26 @@ This repository is intentionally product-agnostic on the main branch. Concrete e
 
 The current branch does not demonstrate a specific Tiny Tool Development product. Checkout an example branch to see real sample content.
 
+## Available Example Branches
+
+| Branch | Product | Unreal Version | What it demonstrates |
+| --- | --- | --- | --- |
+| [`LLM-Store-Examples_v.5.4`](https://github.com/Held0fTheWelt/TinyToolDev_Examples/tree/LLM-Store-Examples_v.5.4) | LLM Store | Unreal Engine 5.4 | C++ actors, Blueprint helper nodes, scenario prompts, mock provider setup, route policies, buyer documentation, and bundled plugin source. |
+
+To inspect the LLM Store sample:
+
+```bash
+git fetch origin
+git checkout LLM-Store-Examples_v.5.4
+```
+
 ## Branch Model
 
 Use `main` as the neutral base. Each example should use its own branch:
 
 ```text
 main
+LLM-Store-Examples_v.5.4
 example/<product>/<topic>
 example/<product>/<topic>-blueprint
 example/<product>/<topic>-cpp
@@ -32,6 +46,7 @@ integration/<product-a>-<product-b>/<topic>
 Examples:
 
 ```text
+LLM-Store-Examples_v.5.4
 example/llmstore/quickstart
 example/llmstore/blueprint-chat
 example/advancedtween/cpp-runtime
