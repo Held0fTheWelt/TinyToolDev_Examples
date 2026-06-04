@@ -14,25 +14,25 @@ SmartContentDiet centralizes content-health signals and similarity grouping behi
 
 ## First Run
 
-1. Copy the distributed SmartContentDiet plugin into `Plugins/SmartContentDiet` (see `Plugins/README.md`). Do not commit that folder.
+1. Copy the released SmartContentDiet plugin package into `Plugins/SmartContentDiet`. Do not commit that folder.
 2. Open `TinyToolDev_Examples.uproject` in Unreal Engine 5.4.
 3. Build `TinyToolDev_ExamplesEditor` for Win64 Development.
 4. Run automation:
 
 ```text
-Automation RunTests SmartContentDietExamples -NullRHI
+UnrealEditor-Cmd.exe TinyToolDev_Examples.uproject -ExecCmds="Automation RunTests SmartContentDietExamples" -TestExit="Automation Test Queue Empty" -unattended -NullRHI -nopause -nosplash -stdout
 ```
 
 5. Open the SmartContentDiet editor UI and confirm the similarity funnel lists the built-in baseline. After this sample module loads, you should also see the `example-prefix` third-party provider.
 
 ## Plugin Requirement
 
-SmartContentDiet is distributed separately and is intentionally not part of this example repository. Install it as a project plugin under `Plugins/SmartContentDiet` or as an engine plugin before opening the sample.
+SmartContentDiet is distributed separately and is intentionally not part of this example repository. Install the released package as a project plugin under `Plugins/SmartContentDiet` or as an engine plugin before opening the sample.
 
 Maintainer validation path:
 
 ```text
-copy <TinyToolDevelopment>/Git/GovernanceDevelopmentPlugins/SmartContentDiet  →  Plugins/SmartContentDiet
+copy <TinyToolDevelopment>/Git/Saved/SmartContentDiet_Release_1.0.1  ->  Plugins/SmartContentDiet
 ```
 
 ## Main Entry Points
@@ -75,11 +75,11 @@ https://github.com/Held0fTheWelt/TinyToolDevelopment/blob/master/docs/architectu
 ## Verification
 
 ```text
-D:/Engines/UE_5.4/Engine/Build/BatchFiles/Build.bat TinyToolDev_ExamplesEditor Win64 Development -Project=D:/TinyToolDevelopment/TinyToolDev_Examples/TinyToolDev_Examples.uproject
+D:/Engines/UE_5.4/Engine/Build/BatchFiles/Build.bat TinyToolDev_ExamplesEditor Win64 Development -Project=D:/TinyToolDevelopment/TinyToolDev_Examples/TinyToolDev_Examples.uproject -WaitMutex
 ```
 
 ```text
-UnrealEditor-Cmd.exe TinyToolDev_Examples.uproject -NullRHI -ExecCmds="Automation RunTests SmartContentDietExamples; Quit"
+UnrealEditor-Cmd.exe TinyToolDev_Examples.uproject -ExecCmds="Automation RunTests SmartContentDietExamples" -TestExit="Automation Test Queue Empty" -unattended -NullRHI -nopause -nosplash -stdout
 ```
 
 Expected: `SmartContentDietExamples.CustomProvider.GroupsByPrefix` → `Result={Success}`.

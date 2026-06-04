@@ -72,7 +72,7 @@ Shared documentation:
 - `Documentation/ExampleBranchChecklist.md` lists the minimum quality bar for a new branch.
 - `Documentation/CurrentExample.md` explains the currently checked-out example branch.
 - `Examples/README.md` explains where branch-specific non-asset sample data can live.
-- `Plugins/README.md` explains how product plugins should be handled by branches.
+- Product plugins are installed locally under `Plugins/` and are not committed.
 
 ## Branch Quality Bar
 
@@ -100,11 +100,11 @@ This branch requires the separately distributed `SmartContentDiet` plugin. The p
 
 `Plugins/SmartContentDiet` is ignored on purpose so locally installed plugin packages, private builds, binaries, and credentials do not accidentally enter the example repository.
 
-This is the intended validation workflow for maintainers: copy the original distributed plugin into `Plugins/SmartContentDiet`, build or run the examples, and keep the plugin package local.
+This is the intended validation workflow for maintainers: copy the released plugin package into `Plugins/SmartContentDiet`, build or run the examples, and keep the plugin package local. For the current Unreal Engine 5.4 line, validate with `TinyToolDevelopment/Git/Saved/SmartContentDiet_Release_1.0.1`.
 
 ## Start Here
 
-1. Install SmartContentDiet under `Plugins/SmartContentDiet` (see `Plugins/README.md`).
+1. Install the released SmartContentDiet package under `Plugins/SmartContentDiet`.
 2. Open `TinyToolDev_Examples.uproject` in Unreal Engine 5.4.
 3. Read `Documentation/CurrentExample.md` for the full walkthrough.
 4. Open the SmartContentDiet editor UI and confirm the similarity funnel lists the built-in baseline and, after this sample module loads, the `example-prefix` third-party provider.
@@ -117,7 +117,6 @@ This is the intended validation workflow for maintainers: copy the original dist
 | `Source/TinyToolDev_Examples/Public/ExampleCustomSimilarityProvider.h` | Minimal `ISmartSimilarityProvider` implementation. |
 | `Source/TinyToolDev_Examples/Private/TinyToolDev_ExamplesModule.cpp` | Registers the example provider at `ThirdParty` tier on startup. |
 | `Source/TinyToolDev_Examples/Private/ExampleProviderTests.cpp` | Automation test for folder-prefix grouping. |
-| `Plugins/README.md` | Notes about the intentionally external plugin dependency. |
 
 ## Documentation Map
 
@@ -133,10 +132,10 @@ Content-health evidence contract (for `ISmartContentHealthSource` consumers):
 
 ```text
 Build TinyToolDev_ExamplesEditor Win64 Development -Project=<path>/TinyToolDev_Examples.uproject
-Automation RunTests SmartContentDietExamples -NullRHI
+UnrealEditor-Cmd.exe <path>/TinyToolDev_Examples.uproject -ExecCmds="Automation RunTests SmartContentDietExamples" -TestExit="Automation Test Queue Empty" -unattended -NullRHI -nopause -nosplash -stdout
 ```
 
-Expected: `SmartContentDietExamples.CustomProvider.GroupsByPrefix` reports success after the original SmartContentDiet plugin is installed locally.
+Expected: `SmartContentDietExamples.CustomProvider.GroupsByPrefix` reports success after the released SmartContentDiet plugin is installed locally.
 
 ## Repository Policy
 
