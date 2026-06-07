@@ -1,0 +1,54 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0.0",
+	"FriendlyName": "Internal Index Service",
+	"Description": "Local indexing, retrieval, and context-pack service contracts for Unreal Engine evidence workflows.",
+	"Category": "AI",
+	"CreatedBy": "Tiny Tool Development",
+	"CreatedByURL": "https://www.linkedin.com/company/tiny-tool-development",
+	"DocsURL": "Documentation Folder in Plugin Root",
+	"MarketplaceURL": "com.epicgames.launcher://ue/Fab/product/41f15640-e169-490c-9edf-bd3255699043",
+	"SupportURL": "https://www.linkedin.com/company/tiny-tool-development",
+	"EngineVersion": "5.4.0",
+	"CanContainContent": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "InternalIndexServiceInterface",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64",
+				"Linux",
+				"Mac"
+			]
+		},
+		{
+			"Name": "InternalIndexService",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64",
+				"Linux",
+				"Mac"
+			]
+		},
+		{
+			"Name": "InternalIndexServiceEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit",
+			"PlatformAllowList": [
+				"Win64",
+				"Linux",
+				"Mac"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "SQLiteCore",
+			"Enabled": true
+		}
+	]
+}

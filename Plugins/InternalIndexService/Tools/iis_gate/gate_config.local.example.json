@@ -1,0 +1,30 @@
+{
+  "plugins_root": "AIPlugins",
+  "engine_root": "D:/Engines/UE_5.4",
+  "project_file": "D:/TinyToolDevelopment/Git/PluginProject.uproject",
+  "sample_project": "D:/TinyToolDevelopment/Git/PluginProject.uproject",
+  "test_project": "D:/TinyToolDevelopment/TinyToolDev_Examples/TinyToolDev_Examples.uproject",
+  "test_branch": "InternalIndexService-Examples_v.5.4",
+  "_comment_transport": "stages.transport=true copies each BuildPlugin package into <test_project>/Plugins/<plugin>, then editor_smoke/automation/sample_scan run against test_project. GUARDRAIL: <test_project>/Plugins MUST be git-ignored ('/Plugins' in .gitignore) or transport FAILS. test_branch (optional): the gate REFUSES if the test project is on a different branch (branch-per-plugin model). Use crossbuild=false for a Blueprint-only test project (plugin binaries are precompiled by buildplugin).",
+  "uproject_relative": "",
+  "stage_timeout_s": 7200,
+  "_comment_editor_timeout": "editor_stage_timeout_s bounds editor-launch stages (editor_smoke/automation/automation_full/sample_scan). Editor stages exit via -TestExit when the automation queue drains; this is the safety net if that never fires (a wedged editor fails in minutes, not the 2h build timeout). Build/crossbuild keep stage_timeout_s.",
+  "editor_stage_timeout_s": 1800,
+  "runuat": "Engine/Build/BatchFiles/RunUAT.bat",
+  "build_batch": "Engine/Build/BatchFiles/Build.bat",
+  "editor_cmd": "Engine/Binaries/Win64/UnrealEditor-Cmd.exe",
+  "_comment_platform": "Windows example for PluginProjectGit. WSL/Linux: RunUAT.sh and Engine/Binaries/Linux/UnrealEditor-Cmd",
+  "plugins": ["InternalIndexService", "UnrealIntegrationIntelligence"],
+  "stages": {
+    "buildplugin": true,
+    "transport": true,
+    "crossbuild": false,
+    "editor_smoke": true,
+    "automation": true,
+    "automation_full": true,
+    "sample_scan": true,
+    "mutation_flags": true,
+    "pytest": true,
+    "diff_check": true
+  }
+}
