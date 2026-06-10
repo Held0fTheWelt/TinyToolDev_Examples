@@ -9,7 +9,7 @@ public class InternalIndexServiceUMCPBridge : ModuleRules
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		DefaultBuildSettings = BuildSettingsVersion.Latest;
-		CppStandard = CppStandardVersion.Cpp17;
+		CppStandard = CppStandardVersion.Cpp20;
 
 		PrivateDependencyModuleNames.AddRange(new string[]
 		{
