@@ -1,0 +1,39 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0.0",
+	"FriendlyName": "IIS LLM Store Bridge",
+	"Description": "Interface-only bridge that lets Internal Index Service execute embedding routes through LLM Store without coupling either core plugin.",
+	"Category": "AI Plugin Bridges",
+	"CreatedBy": "Tiny Tool Development",
+	"CreatedByURL": "https://www.linkedin.com/company/tiny-tool-development",
+	"DocsURL": "https://github.com/Held0fTheWelt/TinyToolDevelopment/tree/master/bridge-plugins/InternalIndexServiceLLMStoreBridge",
+	"SupportURL": "https://www.linkedin.com/company/tiny-tool-development",
+	"EngineVersion": "5.4.0",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "InternalIndexServiceLLMStoreBridge",
+			"Type": "Runtime",
+			"LoadingPhase": "PostEngineInit",
+			"PlatformAllowList": [
+				"Win64",
+				"Linux",
+				"Mac"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "InternalIndexService",
+			"Enabled": true
+		},
+		{
+			"Name": "LLMStore",
+			"Enabled": true
+		}
+	],
+	"IsExperimentalVersion": false
+}
