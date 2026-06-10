@@ -1,8 +1,0 @@
-{
-	"BuildId": "33043543",
-	"Modules": 
-	{
-		"UIIInternalIndexServiceBridge": "UnrealEditor-UIIInternalIndexServiceBridge.dll",
-		"UIIInternalIndexServiceBridgeEditor": "UnrealEditor-UIIInternalIndexServiceBridgeEditor.dll"
-	}
-}

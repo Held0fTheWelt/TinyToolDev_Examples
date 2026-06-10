@@ -1,9 +1,0 @@
-{
-	"RemapUnityFiles": 
-	{
-		"Module.UIIInternalIndexServiceBridge.cpp.obj": [
-			"UIIInternalIndexServiceBridgeModule.cpp.obj",
-			"UIIInternalIndexServiceHandoffImporter.cpp.obj"
-		]
-	}
-}
