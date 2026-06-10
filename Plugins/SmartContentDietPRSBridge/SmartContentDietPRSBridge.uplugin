@@ -1,0 +1,35 @@
+{
+	"FileVersion": 3,
+	"Version": 2,
+	"VersionName": "1.0.1",
+	"FriendlyName": "SmartContentDiet PRS Bridge",
+	"Description": "Interface-only bridge connecting SmartContentDiet placement review with Project Restructure Service dry-run/apply/rollback and read-only SCD health queries.",
+	"Category": "AI Plugin Bridges",
+	"CreatedBy": "Tiny Tool Development",
+	"EngineVersion": "5.4.0",
+	"CanContainContent": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "SmartContentDietPRSBridge",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64",
+				"Linux",
+				"Mac"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "SmartContentDiet",
+			"Enabled": true
+		},
+		{
+			"Name": "ProjectRestructureService",
+			"Enabled": true
+		}
+	],
+	"IsExperimentalVersion": false
+}
