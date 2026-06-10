@@ -33,3 +33,4 @@ Saved/Collections/
 # Local plugin installs. Product packages are required but not committed.
 /Plugins/LLMStore
 /Plugins/SmartContentDiet
+/Plugins
