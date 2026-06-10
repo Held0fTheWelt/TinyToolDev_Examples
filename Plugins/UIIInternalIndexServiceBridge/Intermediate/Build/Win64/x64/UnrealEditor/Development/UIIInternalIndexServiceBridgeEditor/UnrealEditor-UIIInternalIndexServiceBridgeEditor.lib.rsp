@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-UIIInternalIndexServiceBridgeEditor.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\PluginProjectGit\Intermediate\Build\Win64\x64\PluginProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp17.h.obj"
+"D:\PluginProjectGit\Plugins\UIIInternalIndexServiceBridge\Intermediate\Build\Win64\x64\UnrealEditor\Development\UIIInternalIndexServiceBridgeEditor\Module.UIIInternalIndexServiceBridgeEditor.cpp.obj"
+"D:\PluginProjectGit\Plugins\UIIInternalIndexServiceBridge\Intermediate\Build\Win64\x64\UnrealEditor\Development\UIIInternalIndexServiceBridgeEditor\Default.rc2.res"
+/OUT:"D:\PluginProjectGit\Plugins\UIIInternalIndexServiceBridge\Intermediate\Build\Win64\x64\UnrealEditor\Development\UIIInternalIndexServiceBridgeEditor\UnrealEditor-UIIInternalIndexServiceBridgeEditor.lib"

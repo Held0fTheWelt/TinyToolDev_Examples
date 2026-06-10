@@ -1,28 +1,27 @@
-# Current Example: IIS Unified MCP Bridge
+# Current Example: 
 
-This branch demonstrates the bridge plugin **IIS Unified MCP Bridge** in Unreal Engine 5.4.
+This branch demonstrates the bridge plugin **** in Unreal Engine 5.4.
 
 ## What this plugin does
 
-Interface-only bridge that publishes Internal Index Service agent tools to the Unified MCP Server, without coupling either core plugin.
+
 
 ## First Run
 
 1. Open TinyToolDev_Examples.uproject in Unreal Engine 5.4.
-2. Ensure Plugins/InternalIndexServiceUMCPBridge is present in this repository branch.
+2. Ensure Plugins/UIIInternalIndexServiceBridge is present in this repository branch.
 3. Enable the plugin in the project plugin settings if required by your project settings.
 4. Build the project editor target for Win64 Development and follow your plugin-specific tests/docs if available.
 
 ## Required dependencies
 
-- InternalIndexService
-- UnifiedMcpServer
+- 
 
 ## Plugin metadata
 
-- Module name: InternalIndexServiceUMCPBridge
-- Plugin loading phase: PostEngineInit
-- Engine version: 5.4.0
-- Documentation URL: https://github.com/Held0fTheWelt/TinyToolDevelopment/tree/master/bridge-plugins/InternalIndexServiceUMCPBridge
+- Module name: 
+- Plugin loading phase: 
+- Engine version: 
+- Documentation URL: 
 
 Branch quality note: keep this plugin folder self-contained and verify that the branch opens with TinyToolDev_Examples.uproject.

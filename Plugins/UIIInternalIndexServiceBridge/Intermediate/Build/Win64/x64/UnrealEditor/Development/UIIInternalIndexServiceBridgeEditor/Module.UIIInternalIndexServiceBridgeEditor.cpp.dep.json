@@ -1,0 +1,22 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\pluginprojectgit\\plugins\\uiiinternalindexservicebridge\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\uiiinternalindexservicebridgeeditor\\module.uiiinternalindexservicebridgeeditor.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\pluginprojectgit\\intermediate\\build\\win64\\x64\\pluginprojecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp17.h.pch",
+        "Includes": [
+            "d:\\pluginprojectgit\\plugins\\uiiinternalindexservicebridge\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\uiiinternalindexservicebridgeeditor\\definitions.uiiinternalindexservicebridgeeditor.h",
+            "d:\\pluginprojectgit\\plugins\\uiiinternalindexservicebridge\\intermediate\\build\\win64\\unrealeditor\\inc\\uiiinternalindexservicebridgeeditor\\uht\\uiiinternalindexservicebridgeeditor.init.gen.cpp",
+            "d:\\pluginprojectgit\\plugins\\uiiinternalindexservicebridge\\intermediate\\build\\win64\\unrealeditor\\inc\\uiiinternalindexservicebridgeeditor\\uht\\uiiinternalindexservicebridgepythonbridge.gen.cpp",
+            "d:\\pluginprojectgit\\plugins\\uiiinternalindexservicebridge\\source\\uiiinternalindexservicebridgeeditor\\public\\uiiinternalindexservicebridgepythonbridge.h",
+            "d:\\pluginprojectgit\\plugins\\uiiinternalindexservicebridge\\intermediate\\build\\win64\\unrealeditor\\inc\\uiiinternalindexservicebridgeeditor\\uht\\uiiinternalindexservicebridgepythonbridge.generated.h",
+            "d:\\pluginprojectgit\\plugins\\uiiinternalindexservicebridge\\source\\uiiinternalindexservicebridgeeditor\\private\\uiiinternalindexservicebridgeeditormodule.cpp",
+            "d:\\pluginprojectgit\\plugins\\uiiinternalindexservicebridge\\source\\uiiinternalindexservicebridgeeditor\\public\\uiiinternalindexservicebridgeeditormodule.h",
+            "d:\\pluginprojectgit\\plugins\\uiiinternalindexservicebridge\\source\\uiiinternalindexservicebridgeeditor\\private\\uiiinternalindexservicebridgepythonbridge.cpp",
+            "d:\\pluginprojectgit\\plugins\\uiiinternalindexservicebridge\\source\\uiiinternalindexservicebridge\\public\\uiiinternalindexservicebridgeblueprintlibrary.h",
+            "d:\\pluginprojectgit\\plugins\\uiiinternalindexservicebridge\\intermediate\\build\\win64\\unrealeditor\\inc\\uiiinternalindexservicebridge\\uht\\uiiinternalindexservicebridgeblueprintlibrary.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
