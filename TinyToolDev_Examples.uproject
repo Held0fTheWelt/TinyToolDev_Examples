@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "5.4",
+	"EngineAssociation": "5.5",
 	"Category": "Tiny Tool Development Examples",
 	"Description": "Neutral Unreal Engine base project for Tiny Tool Development examples. Product-specific samples are maintained on dedicated example branches.",
 	"Modules": [
