@@ -1,0 +1,29 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0.0",
+	"FriendlyName": "IIS Unified MCP Bridge",
+	"Description": "Interface-only bridge that publishes Internal Index Service agent tools to the Unified MCP Server, without coupling either core plugin.",
+	"Category": "AI Plugin Bridges",
+	"CreatedBy": "Tiny Tool Development",
+	"CreatedByURL": "https://www.linkedin.com/company/tiny-tool-development",
+	"DocsURL": "https://github.com/Held0fTheWelt/TinyToolDevelopment/tree/master/bridge-plugins/InternalIndexServiceUMCPBridge",
+	"SupportURL": "https://www.linkedin.com/company/tiny-tool-development",
+	"EngineVersion": "5.4.0",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "InternalIndexServiceUMCPBridge",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit",
+			"PlatformAllowList": [ "Win64", "Linux", "Mac" ]
+		}
+	],
+	"Plugins": [
+		{ "Name": "InternalIndexService", "Enabled": true },
+		{ "Name": "UnifiedMcpServer", "Enabled": true }
+	],
+	"IsExperimentalVersion": false
+}
