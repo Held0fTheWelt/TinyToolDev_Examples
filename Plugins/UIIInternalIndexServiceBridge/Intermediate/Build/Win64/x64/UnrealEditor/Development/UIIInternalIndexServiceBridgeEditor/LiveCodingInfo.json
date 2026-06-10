@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.UIIInternalIndexServiceBridgeEditor.cpp.obj": [
+			"UIIInternalIndexServiceBridgeEditor.init.gen.cpp.obj",
+			"UIIInternalIndexServiceBridgePythonBridge.gen.cpp.obj",
+			"UIIInternalIndexServiceBridgeEditorModule.cpp.obj",
+			"UIIInternalIndexServiceBridgePythonBridge.cpp.obj"
+		]
+	}
+}

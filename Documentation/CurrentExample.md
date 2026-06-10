@@ -1,15 +1,27 @@
-# Current Example
+# Current Example: 
 
-This is the neutral base branch of `TinyToolDev_Examples`.
+This branch demonstrates the bridge plugin **** in Unreal Engine 5.4.
 
-There is no product-specific example active on this branch. Checkout an `example/<product>/<topic>` branch to inspect concrete sample content.
+## What this plugin does
 
-An example branch should replace this file with a buyer-facing tutorial that explains:
 
-- Which Tiny Tool Development product or feature is demonstrated.
-- Which map, Blueprint, C++ class, or widget to open first.
-- Which setup steps are required.
-- What the expected result looks like.
-- How the pattern can be adapted in a real Unreal project.
 
-Keep this file practical and beginner-friendly. A buyer should not need to reverse-engineer the sample from source code alone.
+## First Run
+
+1. Open TinyToolDev_Examples.uproject in Unreal Engine 5.4.
+2. Ensure Plugins/UIIInternalIndexServiceBridge is present in this repository branch.
+3. Enable the plugin in the project plugin settings if required by your project settings.
+4. Build the project editor target for Win64 Development and follow your plugin-specific tests/docs if available.
+
+## Required dependencies
+
+- 
+
+## Plugin metadata
+
+- Module name: 
+- Plugin loading phase: 
+- Engine version: 
+- Documentation URL: 
+
+Branch quality note: keep this plugin folder self-contained and verify that the branch opens with TinyToolDev_Examples.uproject.
