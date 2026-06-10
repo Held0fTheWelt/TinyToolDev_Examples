@@ -2,62 +2,54 @@
 
 <img src="Documentation/Assets/TinyToolDevelopmentIcon.png" alt="Tiny Tool Development icon" width="128">
 
-Neutral Unreal Engine base project for Tiny Tool Development sample content.
+This repository is a **multi-branch Unreal example hub** for Tiny Tool Development.
 
-This repository is intentionally product-agnostic on the main branch. Concrete examples, tutorials, plugin demos, and buyer-facing walkthroughs live on dedicated Git branches. That keeps every sample focused, easy to compare, and easy to reset.
+`main` stays a neutral UE 5.4 base project.
 
-## What This Branch Contains
+Every product or integration story is represented by its own branch so each buyer gets one clean, focused entry point, one plugin setup, one verification path, and one README that explains what to run.
+
+## What is inside `main`
 
 - A clean Unreal Engine 5.4 C++ project.
-- Tiny Tool Development project metadata in Project Settings.
-- Shared documentation for branch-based example work.
-- Git hygiene for Unreal-generated files.
-- Tiny Tool Development branding assets for project and packaged Windows builds.
-- No product-specific plugin dependency in the base branch.
+- Shared project metadata for Tiny Tool Development.
+- Branch workflow documentation and templates.
+- No product-specific plugin dependencies.
+- Source control hygiene for Unreal-generated folders (`Binaries`, `Intermediate`, `Saved`, `DerivedDataCache`, `.vs`).
 
-The current branch does not demonstrate a specific Tiny Tool Development product. Checkout an example branch to see real sample content.
+## Branch strategy
+
+This repo follows a branch-per-example model:
+
+- `main` contains only shared project infrastructure.
+- Every example, bridge, or integration has its own branch.
+- The active branch should answer:
+  - What product is demonstrated?
+  - Which plugins are required?
+  - What is the first practical step?
+  - What is the quick verification command/test?
 
 ## Available Example Branches
 
-| Branch | Product | Unreal Version | What it demonstrates |
-| --- | --- | --- | --- |
-| [`LLM-Store-Examples_v.5.4`](https://github.com/Held0fTheWelt/TinyToolDev_Examples/tree/LLM-Store-Examples_v.5.4) | LLM Store | Unreal Engine 5.4 | C++ actors, Blueprint helper nodes, scenario prompts, mock provider setup, route policies, buyer documentation, and bundled plugin source. |
-| [`SmartContentDiet-Examples_v.5.4`](https://github.com/Held0fTheWelt/TinyToolDev_Examples/tree/SmartContentDiet-Examples_v.5.4) | SmartContentDiet | Unreal Engine 5.4 | Custom `ISmartSimilarityProvider`, third-party registry registration, and buyer documentation for the open interface. |
+| Branch | Focus | Product / Integration | Unreal Version | Notes |
+| --- | --- | --- | --- | --- |
+| [`LLM-Store-Examples_v.5.4`](https://github.com/Held0fTheWelt/TinyToolDev_Examples/tree/LLM-Store-Examples_v.5.4) | Example | LLM Store | 5.4 | End-to-end LLM workflow sample with example actors, prompts, and documentation. |
+| [`SmartContentDiet-Examples_v.5.4`](https://github.com/Held0fTheWelt/TinyToolDev_Examples/tree/SmartContentDiet-Examples_v.5.4) | Example | SmartContentDiet | 5.4 | Open provider interface and custom similarity example provider. |
+| [`InternalIndexService-Examples_v.5.4`](https://github.com/Held0fTheWelt/TinyToolDev_Examples/tree/InternalIndexService-Examples_v.5.4) | Example | Internal Index Service | 5.4 | Baseline Internal Index Service usage and extension surface demo. |
+| [`InternalIndexServiceLLMStoreBridge-Examples_v.5.4`](https://github.com/Held0fTheWelt/TinyToolDev_Examples/tree/InternalIndexServiceLLMStoreBridge-Examples_v.5.4) | Bridge | Internal Index Service ? LLM Store | 5.4 | Bridge plugin dedicated branch for embedding route handoff. |
+| [`InternalIndexServiceUMCPBridge-Examples_v.5.4`](https://github.com/Held0fTheWelt/TinyToolDev_Examples/tree/InternalIndexServiceUMCPBridge-Examples_v.5.4) | Bridge | Internal Index Service ? Unified MCP | 5.4 | Bridge plugin dedicated branch for MCP tool publishing. |
+| [`SmartContentDietIISSimilarityBridge-Examples_v.5.4`](https://github.com/Held0fTheWelt/TinyToolDev_Examples/tree/SmartContentDietIISSimilarityBridge-Examples_v.5.4) | Bridge | SmartContentDiet ? Internal Index Service | 5.4 | Bridge plugin dedicated branch for IIS similarity + health evidence import. |
+| [`SmartContentDietPRSBridge-Examples_v.5.4`](https://github.com/Held0fTheWelt/TinyToolDev_Examples/tree/SmartContentDietPRSBridge-Examples_v.5.4) | Bridge | SmartContentDiet ? Project Restructure Service | 5.4 | Bridge plugin dedicated branch for placement-review and dry-run/apply/rollback support. |
+| [`SmartContentDietUIIMigrationBridge-Examples_v.5.4`](https://github.com/Held0fTheWelt/TinyToolDev_Examples/tree/SmartContentDietUIIMigrationBridge-Examples_v.5.4) | Bridge | SmartContentDiet ? UII | 5.4 | Bridge plugin dedicated branch for migration-advice surfaces. |
+| [`UIIInternalIndexServiceBridge-Examples_v.5.4`](https://github.com/Held0fTheWelt/TinyToolDev_Examples/tree/UIIInternalIndexServiceBridge-Examples_v.5.4) | Bridge | Unreal Integration Intelligence ? Internal Index Service | 5.4 | Bridge plugin branch for handoff/import evidence workflows. |
 
-To inspect an example branch:
+## How to inspect a branch
 
 ```bash
 git fetch origin
-git checkout LLM-Store-Examples_v.5.4
-git checkout SmartContentDiet-Examples_v.5.4
+git checkout <branch-name>
 ```
 
-## Branch Model
-
-Use `main` as the neutral base. Each example should use its own branch:
-
-```text
-main
-LLM-Store-Examples_v.5.4
-SmartContentDiet-Examples_v.5.4
-example/<product>/<topic>
-example/<product>/<topic>-blueprint
-example/<product>/<topic>-cpp
-integration/<product-a>-<product-b>/<topic>
-```
-
-Examples:
-
-```text
-LLM-Store-Examples_v.5.4
-SmartContentDiet-Examples_v.5.4
-example/llmstore/quickstart
-example/llmstore/blueprint-chat
-example/advancedtween/cpp-runtime
-integration/llmstore-ui/debug-panel
-```
-
-Each branch should be self-contained. A buyer should be able to checkout the branch, open the `.uproject`, read the branch README, and understand what to try first.
+Then open `TinyToolDev_Examples.uproject` and read `Documentation/CurrentExample.md` on that branch.
 
 ## How To Use
 
@@ -71,7 +63,6 @@ Useful commands:
 
 ```bash
 git branch --all
-git checkout example/<product>/<topic>
 git checkout main
 ```
 
@@ -106,5 +97,5 @@ The shared project icon lives in `Build/Windows/Application.ico`; the source PNG
 
 Tiny Tool Development creates focused Unreal Engine tools, plugins, and learning material with practical C++ and Blueprint usage in mind.
 
-- Homepage: https://github.com/Held0fTheWelt/TinyToolDevelopment
+- Homepage: https://github.com/Held0fTheWelt/TinyToolDev_Examples
 - Support: https://discord.gg/HycgjVkK4J
