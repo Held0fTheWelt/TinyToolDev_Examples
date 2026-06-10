@@ -20,9 +20,9 @@ Interface-only bridge that lets SmartContentDiet surface migration and upgrade-i
 
 ## Plugin metadata
 
-- Module name: $(@{FileVersion=3; Version=2; VersionName=1.0.1; FriendlyName=SmartContentDiet UII Migration Bridge; Description=Interface-only bridge that lets SmartContentDiet surface migration and upgrade-impact advice from Unreal Integration Intelligence handoff artifacts.; Category=AI Plugin Bridges; CreatedBy=Tiny Tool Development; EngineVersion=5.4.0; CanContainContent=False; Installed=False; Modules=System.Object[]; Plugins=System.Object[]; IsExperimentalVersion=False}.Modules[0].Name)
-- Plugin loading phase: $(@{FileVersion=3; Version=2; VersionName=1.0.1; FriendlyName=SmartContentDiet UII Migration Bridge; Description=Interface-only bridge that lets SmartContentDiet surface migration and upgrade-impact advice from Unreal Integration Intelligence handoff artifacts.; Category=AI Plugin Bridges; CreatedBy=Tiny Tool Development; EngineVersion=5.4.0; CanContainContent=False; Installed=False; Modules=System.Object[]; Plugins=System.Object[]; IsExperimentalVersion=False}.Modules[0].LoadingPhase)
-- Engine version: $(@{FileVersion=3; Version=2; VersionName=1.0.1; FriendlyName=SmartContentDiet UII Migration Bridge; Description=Interface-only bridge that lets SmartContentDiet surface migration and upgrade-impact advice from Unreal Integration Intelligence handoff artifacts.; Category=AI Plugin Bridges; CreatedBy=Tiny Tool Development; EngineVersion=5.4.0; CanContainContent=False; Installed=False; Modules=System.Object[]; Plugins=System.Object[]; IsExperimentalVersion=False}.EngineVersion)
-- Documentation URL: $(@{FileVersion=3; Version=2; VersionName=1.0.1; FriendlyName=SmartContentDiet UII Migration Bridge; Description=Interface-only bridge that lets SmartContentDiet surface migration and upgrade-impact advice from Unreal Integration Intelligence handoff artifacts.; Category=AI Plugin Bridges; CreatedBy=Tiny Tool Development; EngineVersion=5.4.0; CanContainContent=False; Installed=False; Modules=System.Object[]; Plugins=System.Object[]; IsExperimentalVersion=False}.DocsURL)
+- Module name: SmartContentDietUIIMigrationBridge
+- Plugin loading phase: PostEngineInit
+- Engine version: 5.4.0
+- Documentation URL: 
 
 Branch quality note: keep this plugin folder self-contained and verify that the branch opens with TinyToolDev_Examples.uproject.
